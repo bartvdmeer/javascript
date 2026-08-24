@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/devcontainer.json. 
+{
+	"name": "html",
+	// Image to use for the dev container. More info: https://containers.dev/templates
+	"image": "mcr.microsoft.com/devcontainers/universal:latest",
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		8080
+	],
+	"portsAttributes": {
+		"8080": {
+			"label": "webserver",
+			"onAutoForward": "openPreview"
+		}
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+
+	// Use 'postStartCommand' to run commands after the container is started.
+	"postStartCommand": "bash .devcontainer/postStartCommand.sh",
+	
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"extensions": [
+				"ms-vsliveshare.vsliveshare" // add google-docs like typing in same file, click on live-share button in left icon pane
+			]
+		}
+	}
+}
