@@ -2,7 +2,8 @@ var kater,toren,piano;
 
 function preload() {
   kater = loadImage("images/brieck.jpg");
-
+  toren = loadImage("image/toren.jpg")
+  piano = loadimage("image/piano.jpg")
 }
 
 function setup() {
@@ -21,4 +22,6 @@ function setup() {
 function draw() {
   text("afmeting: " + kater.width + " x " + kater.height,30,20);
   image(kater,25,25,250,250);
+  image(toren,300,25,250,250);
+  image(piano,600,25,250,250)
 }
