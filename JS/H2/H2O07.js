@@ -1,5 +1,5 @@
 var vierkanten = new Array(23,18,11);
-var namen = new Array("August","Tinus","Colette");
+var namen = new Array("August","Tinus","Colette","Bart");
 
 function setup() {
   canvas = createCanvas(850,220);
@@ -10,8 +10,8 @@ function setup() {
   noStroke();
   vierkanten.push(30);
   // voeg je eigen naam toe
-  // sorteer de array met namen
-  // verwijder het eerste element uit vierkanten
+  namen.sort()
+  vierkanten.shift()
   noLoop();
 }
 
@@ -19,8 +19,8 @@ function draw() {
   for (var teller = 0;teller < vierkanten.length;teller++) {
     fill('white');
     text(vierkanten[teller],20,48*(teller + 1));
-    text("omtrek = " + 4*vierkanten[teller],130,48*(teller + 1));
-    text("opp = ",400,48*(teller + 1));
+    text("omtrek = " + 4 * vierkanten[teller],130,48*(teller + 1));
+    text("opp = " + vierkanten[teller] * vierkanten[teller],400,48*(teller + 1));
     fill('dodgerblue');
     rect(90,48*(teller) + 25,vierkanten[teller],vierkanten[teller]);
   }
