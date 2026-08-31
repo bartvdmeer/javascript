@@ -26,4 +26,11 @@ function draw() {
     strandX--; 
   }
   text("strandX=" + strandX,20,20);
+
+  if (strandX == -strand.width) {
+   strandX = 0
+  }
+  if (strandX == 0) {
+    strandX=-600
+  }
 }
