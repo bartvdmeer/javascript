@@ -23,9 +23,9 @@ function setup() {
 
 function draw() {
   background('lavender');
-
+nummer = frameCount % aantalBeeldjes;
   image(animatie[nummer],150,0,2*breedte,2*hoogte);
-  nummer++;
+  
 
   if (nummer == aantalBeeldjes) {
     nummer = 0;
