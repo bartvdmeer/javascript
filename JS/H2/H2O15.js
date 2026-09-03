@@ -46,4 +46,11 @@ function draw() {
   fill('white');
   rect(0,125,width,height - 125);
   image(spriteSheet,0,125,width,width*aantalSpriteRijen / aantalSpriteKolommen);  
+  if (kolom == 0) {
+    rij++;
+  }
+  
+  if (rij == aantalSpriteRijen) {
+    rij = 0;
+  }
 }
