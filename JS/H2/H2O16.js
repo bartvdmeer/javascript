@@ -35,4 +35,24 @@ function setup() {
 function draw() {
   background('lavender');
   image(spriteSheet,x,y,br,ho,(frameCount % aantalSpriteKolommen)*sBr,rij*sHo,sBr,sHo);
+
+  if(keyIsDown(UP_ARROW)){
+    y -= 10
+    rij = 3
+  }
+  
+  if(keyIsDown(DOWN_ARROW)){
+    y += 10
+    rij = 0
+  }
+  if(keyIsDown(RIGHT_ARROW)){
+    x += 10
+    rij = 2
+  }
+  if(keyIsDown(LEFT_ARROW)){
+    x -= 10
+    rij = 1
+  }
+x = constrain(x,0,width-br)
+y = constrain(y,0,height-ho)
 }
