@@ -1,6 +1,6 @@
 var aantalRijenRaster = 6;
 var aantalKolommenRaster = 9;
-var celGrootte;
+var celGroottte;
 
 var animatie = [];
 var aantalBeeldjes = 6;
