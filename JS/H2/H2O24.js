@@ -1,7 +1,7 @@
 var dobbelSteen = {
   x: 25,
   y: 25,
-  grootte: 400,
+  grootte: 200,
   ogen: null,
   diameterOgen: 50,
   R: null,
@@ -22,7 +22,7 @@ var dobbelSteen = {
 
     // hieronder volgt code om de stippen op de juiste plek te krijgen
     
-    fill('white');    
+    fill('black');    
     if (this.ogen!=1) {ellipse(this.x+this.grootte/6*1,this.y+this.grootte/6*1,this.diameterOgen,this.diameterOgen);}
     if (this.ogen==6) {ellipse(this.x+this.grootte/6*3,this.y+this.grootte/6*1,this.diameterOgen,this.diameterOgen);}
     if (this.ogen>3) {ellipse(this.x+this.grootte/6*5,this.y+this.grootte/6*1,this.diameterOgen,this.diameterOgen);}

@@ -2,7 +2,7 @@ var speler = {
   getrokkenKaarten: [],
   
   trekKaart(spel) {
-      volgNummer = floor(random(0,spel.length));
+      volgNummer == floor(random(0,spel.length));
       this.getrokkenKaarten.push(spel[volgNummer]);
   },
   

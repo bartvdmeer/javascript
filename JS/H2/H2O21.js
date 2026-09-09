@@ -52,6 +52,5 @@ function draw() {
   }
 
   cirkel.controleerRaak();
-  cirkel.teken();
-  
+  cirkel.teken() 
 }
