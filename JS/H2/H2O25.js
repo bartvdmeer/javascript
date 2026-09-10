@@ -23,7 +23,7 @@ var jager = {
   },
   
   vlakbijRand() {
-    if (this.x < 4*this.stapGrootte || this.x > canvas.width - 4*this.stapGrootte - this.zijde) {
+    if (this.x < 4*this.stapGrootte || this.x > canvas.width - 4*this.stapGrootte - this.zijde || this.y > canvas.height - 4*this.stapGrootte-this.zijde || this.y < 4*this.stapGrootte) {
       return true;
     }
     else {
@@ -73,6 +73,7 @@ function setup() {
 function draw() {
   if (jager.vlakbijRand()) {
     background('red');
+    prooi.benGeraakt = false
   }
   else {
     background('orange');
