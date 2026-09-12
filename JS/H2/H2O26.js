@@ -70,7 +70,12 @@ function draw() {
   background('lavender');
   vuur.teken();
   
-  // voeg hier de if-else in
+  if(isVlakbij = false){
+    jos.kleur = 'red'
+  }
+  else {
+    jos.kleur = 'salmon'
+  }
   
   jos.teken(mouseX,mouseY);
 }
