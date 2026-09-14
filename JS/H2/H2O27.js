@@ -24,7 +24,12 @@ var detectielus = {
   ikVoelIets: false,
   
   detecteer(voorwerp) {
-    this.ikVoelIets = false;
+    if (voorwerp.x >= this.x && voorwerp.x <= this.x + this.lengte){
+      this.ikVoelIets = true;
+    }
+    else {
+      this.ikVoelIets = false;
+    }
   },
   
   teken() {

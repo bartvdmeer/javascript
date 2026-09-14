@@ -50,13 +50,19 @@ var jos = {
   },
 
   wordtGeraakt(vijand) {
-    return false;
+    if (this.x == vijand.x && this.y == vijand.y){
+      return true
+    }
+    else{
+      return false
+    }
   },
 
   toon() {
     image(this.animatie[this.frameNummer],this.x,this.y,raster.celGrootte,raster.celGrootte);
   }
 }
+
 
 var alice = {
   x: 700,
@@ -76,7 +82,6 @@ var alice = {
     image(this.sprite,this.x,this.y,raster.celGrootte,raster.celGrootte);
   }
 }
-
 
 
 function preload() {
@@ -103,7 +108,7 @@ function draw() {
   jos.beweeg();
   jos.toon();
   alice.toon();
-
+  alice.beweeg()
   if (jos.wordtGeraakt(alice)) {
     noLoop();
   }

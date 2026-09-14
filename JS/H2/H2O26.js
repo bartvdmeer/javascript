@@ -22,7 +22,7 @@ var jos = {
   diameter: 50,
   straal: 25,
   naam: "Jos",
-  kleur: 'salmon',
+  kleur: null,
   
   isVlakbij(gevaar) {
     if (dist(this.x,this.y,gevaar.x,gevaar.y) < this.straal+gevaar.straal + 25) {
@@ -69,8 +69,7 @@ function setup() {
 function draw() {
   background('lavender');
   vuur.teken();
-  
-  if(isVlakbij = false){
+  if(jos.isVlakbij(vuur)){
     jos.kleur = 'red'
   }
   else {

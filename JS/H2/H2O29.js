@@ -26,6 +26,7 @@ var jos = {
   aantalFrames: 6,
   frameNummer: 3,
   stapGrootte: null,
+  gehaald: false,
 
   beweeg() {
     if (keyIsDown(LEFT_ARROW)) {
@@ -44,8 +45,10 @@ var jos = {
       this.y += this.stapGrootte;
       this.frameNummer = 5;
     }
-    
-    this.x = constrain(this.x,0,canvas.width-raster.celGrootte);
+    if (this.x ==canvas.width){
+    this.gehaald = true
+    }
+    this.x = constrain(this.x,0,canvas.width);
     this.y = constrain(this.y,0,canvas.height-raster.celGrootte);
   },
   
@@ -111,5 +114,11 @@ function draw() {
   alice.toon();
   if (jos.wordtGeraakt(alice)) {
     noLoop();
+  }
+  if (jos.gehaald = true){
+    background ('green')
+    fill ('white')
+    text("je hebt gewint",30,300)
+    noLoop()
   }
 }
