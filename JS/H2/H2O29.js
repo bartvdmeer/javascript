@@ -115,10 +115,10 @@ function draw() {
   if (jos.wordtGeraakt(alice)) {
     noLoop();
   }
-  if (jos.gehaald = true){
+  if (jos.gehaald == true){
     background ('green')
     fill ('white')
-    text("je hebt gewint",30,300)
+    text("je hebt gewint",30,300,300)
     noLoop()
   }
 }
