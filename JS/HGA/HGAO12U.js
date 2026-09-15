@@ -40,7 +40,15 @@ var raster = {
   },
   
   controleerRaak(mx,my,k,r) {
-    return false;
+    var result = false
+    var mk = floor (mx/this.grootte)
+    var mr = floor (my/this.grootte)
+    if (mk == k && mr == r){
+      result = true
+    }
+    
+    return result;
+  
   },
   
   tekenStip(x,y) {
@@ -66,8 +74,9 @@ function draw() {
   background(255);
   raster.teken();
   raster.muisOver(mouseX,mouseY);
-  if (mouseIsPressed) {
+  if (mouseIsPressed && mx >= 0 || mx < width || my >= 0|| my < height) {
     raster.plaatsStip(mouseX,mouseY);
   }
   text(raster.aantal,10,35);  
+  
 }
