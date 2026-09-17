@@ -1,4 +1,4 @@
-var dobbelSteen = {
+var DobbelSteen = {
   x: 25,
   y: 25,
   grootte: 200,
