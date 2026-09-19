@@ -1,4 +1,4 @@
-var raster = {
+class Raster  {
   aantalRijen: 6,
   aantalKolommen: 9,
   celGrootte: null,
