@@ -36,10 +36,37 @@ function setup() {
   background(0,0,75,1);
   noStroke();
   k1 = new Knikker();
+  k2 = new Knikker()
+  k3 = new Knikker()
+  k4 = new Knikker()
+  k5 = new Knikker()
+  k6 = new Knikker()
+  k7 = new Knikker()
+  k8 = new Knikker()
+  k9 = new Knikker()
+  k10 = new Knikker()
 }
 
 function draw() {
   background(0,0,75,0.2);
   k1.beweeg();
   k1.teken();
+  k2.beweeg()
+  k2.teken();
+  k3.beweeg();
+  k3.teken();
+  k4.beweeg();
+  k4.teken();
+  k5.beweeg();
+  k5.teken();
+  k6.beweeg();
+  k6.teken();
+  k7.beweeg();
+  k7.teken();
+  k8.beweeg();
+  k8.teken();
+  k9.beweeg();
+  k9.teken();
+  k10.beweeg();
+  k10.teken();
 }
