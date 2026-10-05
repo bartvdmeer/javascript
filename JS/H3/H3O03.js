@@ -107,7 +107,7 @@ class Galgje {
     }
     if (this.woordIsGeraden()) {
       fill('green');
-      text("GEWONNEN :)",0,100,canvas.width,300);
+      text("Goed gedaan " + this.speler.naam + ":)",0,100,canvas.width,300);
     }
     pop();
   }
@@ -132,7 +132,7 @@ function setup() {
 
   canvas = createCanvas(700,400);
   canvas.parent('processing');
-  speler = new Speler('Vincent');
+  speler = new Speler('Bart');
   spel = new Galgje(speler,beeldjes);
   spel.teken();
 }
