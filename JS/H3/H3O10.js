@@ -64,6 +64,7 @@ class Cirkel {
 
 var kleurenSet = ['hotpink','deeppink','mediumvioletred','palevioletred','royalblue','cornflowerblue','skyblue','steelblue'];
 var kleurNummer = 0;
+var tekst = '';
 
 function setup() {
   // initialisatie
@@ -80,10 +81,17 @@ function draw() {
   c1.teken();
   c2.beweeg2();
   c2.teken();
+  text(tekst,0,0,canvas.width,canvas.height);
 }
 
 function keyTyped() {
   kleurNummer = floor(random(0,kleurenSet.length));
+  if (c1.x == c2.x) {
+    tekst='gelukt!';
+  }
+  else {
+    tekst='c1: '+c1.x+ ' | c2: '+c2.x;
+  }
 }
 
 /*  **********************************************************
