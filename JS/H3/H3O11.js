@@ -63,7 +63,7 @@ class Tennisbal {
     if (this.x<this.straal || this.x>canvas.width-this.straal) {
       this.snelheidX*=-1;
     }
-    if (this.y<this.straal || this.y>canvas.height-this.straal) {
+   if (this.y<this.straal) {
       this.snelheidY*=-1;
     }    
   }
@@ -104,9 +104,17 @@ class Tennis {
     text("Dit is een simpel tennis-spel. Bestuur je racket met de a (links) en de d (rechts).\n\nDruk op de spatiebalk om het spel te starten.",0,0,canvas.width,canvas.height);
     pop();
   }
+  eindScherm(){
+    push();
+    textAlign(CENTER,CENTER);
+    fill(0);
+    text("Je bent af.",0,0,canvas.width.heigt);
+    pop();
+  }
   
   update() {
     if (spel.actief) {
+      this.r.beweeg();
       if (this.r.raaktBal(this.b)) {
         this.b.reageerOpRacket(this.r);
       }
@@ -125,6 +133,7 @@ class Tennis {
     else {
       this.b.teken();
       this.r.teken();
+      this.eindScherm();
     }
   }
 }
@@ -153,9 +162,7 @@ function keyTyped() {
   if (!spel.actief && keyCode == 32) {
     spel.actief = true;
   }
-  else {
-    spel.r.beweeg();
-  }
+
 }
 
 /*  **********************************************************
